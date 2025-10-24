@@ -7,10 +7,12 @@ import authRoute from "./routes/authRoute.js";
 import cookieParser from "cookie-parser";
 import userRoute from "./routes/userRoute.js";
 import { protectedRoute } from "./middlewares/authMiddleware.js";
+import path from "path";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5001;
+const __dirname = path.resolve();
 
 const app = express();
 
@@ -19,21 +21,27 @@ app.use(express.json());
 app.use(cookieParser());
 
 // CORS middleware - phải đặt trước các routes
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  })
-);
-
-// public route
+if (process.env.NODE_ENV !== "production") {
+  app.use(
+    cors({
+      origin: ["http://localhost:5173", "http://localhost:5001"],
+      credentials: true,
+    })
+  );
+}
+// public routes (không cần authentication)
 app.use("/api/auth", authRoute);
-
-// public products routes (không cần authentication)
 app.use("/api/products", productsRoutes);
 
-// private route (chỉ admin)
-app.use(protectedRoute);
-app.use("/api/users", userRoute);
+// private routes (cần authentication)
+app.use("/api/users", protectedRoute, userRoute);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  });
+}
 
 connectDB().then(() => {
   app.listen(PORT, () => {
