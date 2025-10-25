@@ -4,8 +4,12 @@ export const categories = [
     label: "Loa kéo",
   },
   {
-    value: "mach",
-    label: "Mạch",
+    value: "loa-xach-tay",
+    label: "Loa xách tay",
+  },
+  {
+    value: "bo-mach",
+    label: "Bo mạch",
   },
   {
     value: "micro",
@@ -18,6 +22,30 @@ export const categories = [
   {
     value: "vang",
     label: "Vang",
+  },
+  {
+    value: "bass",
+    label: "Bass",
+  },
+  {
+    value: "treble",
+    label: "Treble",
+  },
+  {
+    value: "acquy",
+    label: "Ắc quy",
+  },
+  {
+    value: "vo-loa",
+    label: "Vỏ loa",
+  },
+  {
+    value: "sub",
+    label: "Subwoofer",
+  },
+  {
+    value: "mach-phan-tang",
+    label: "Mạch phân tầng",
   },
 ];
 
