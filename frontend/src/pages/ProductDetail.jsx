@@ -18,7 +18,7 @@ import {
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { productDetailData, categories } from "../mockData/data";
+import { categories } from "../mockData/data";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import api from "@/lib/axios";
@@ -219,9 +219,7 @@ const ProductDetail = () => {
 
               {/* Rating */}
               <div className="flex items-center gap-2 mb-4">
-                <div className="flex items-center gap-1">
-                  {renderStars(productDetailData.rating)}
-                </div>
+                <div className="flex items-center gap-1">{renderStars(5)}</div>
               </div>
 
               {/* Price */}
@@ -273,10 +271,21 @@ const ProductDetail = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <Button className=" bg-blue-600 hover:bg-blue-700 text-white">
-                  <ShoppingCart className="w-5 h-5 mr-2" />
-                  Mua hàng liên hệ SDT/Zalo: 0123.456.789
-                </Button>
+                <div className="flex flex-col gap-2">
+                  <Button className=" bg-blue-600 hover:bg-blue-700 text-white">
+                    <ShoppingCart className="w-5 h-5 mr-2" />
+                    Mua hàng liên hệ SDT/Zalo: 0937.639.663
+                  </Button>
+                  <p>hoặc</p>
+                  <Button className=" bg-blue-600 hover:bg-blue-700 text-white">
+                    Liên hệ Fanpage
+                    <a
+                      href="https://www.facebook.com/profile.php?id=1000937639663"
+                      target="_blank"
+                    ></a>
+                  </Button>
+                </div>
+
                 {/* <Button variant="outline" className="px-4">
                   <Heart className="w-5 h-5" />
                 </Button>
@@ -295,18 +304,18 @@ const ProductDetail = () => {
 
             {/* Shipping Info */}
             <div className="bg-gray-50 rounded-lg p-4 space-y-3 border-2">
-              <div className="flex items-center gap-3 text-sm">
+              {/* <div className="flex items-center gap-3 text-sm">
                 <Truck className="w-5 h-5 text-blue-600" />
                 <span>Miễn phí vận chuyển cho đơn hàng từ 500k</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3 text-sm">
                 <Shield className="w-5 h-5 text-green-600" />
-                <span>Bảo hành 24 tháng chính hãng</span>
+                <span>Bảo hành 12 tháng chính hãng</span>
               </div>
-              <div className="flex items-center gap-3 text-sm">
+              {/* <div className="flex items-center gap-3 text-sm">
                 <RotateCcw className="w-5 h-5 text-purple-600" />
                 <span>Đổi trả miễn phí trong 7 ngày</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

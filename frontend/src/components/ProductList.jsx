@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { productDetailData } from "@/mockData/data";
 import { useNavigate } from "react-router-dom";
 
 const ProductList = ({ filteredProducts }) => {

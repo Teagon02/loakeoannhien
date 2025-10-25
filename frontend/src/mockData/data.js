@@ -64,49 +64,49 @@ export const filterSorts = [
   },
 ];
 
-export const productDetailData = {
-  id: 1,
-  name: "Loa kéo gia đình công suất lớn Pro Max 2024",
-  price: 13500000,
-  discount: 50,
-  rating: 4.8,
-  images: [
-    "/product.jpg",
-    "/product.jpg",
-    "/product.jpg",
-    "/product.jpg",
-    "/product.jpg",
-    "/product.jpg",
-  ],
-  category: "Loa kéo",
-  brand: "SoundMax",
-  sku: "SKU-LK-001",
-  description:
-    "Loa kéo gia đình cao cấp với công suất mạnh mẽ, âm thanh chất lượng cao và thiết kế hiện đại. Sản phẩm phù hợp cho các sự kiện gia đình, tiệc tùng và sử dụng ngoài trời.",
-  features: [
-    "Công suất 500W RMS / 1000W Peak",
-    "Tần số đáp ứng: 40Hz - 20kHz",
-    "Kết nối Bluetooth 5.0",
-    "Pin lithium 12V 100Ah",
-    "Thời gian phát nhạc: 8-12 giờ",
-    "Chống nước IPX4",
-    "Micro không dây kèm theo",
-    "Điều khiển từ xa",
-  ],
-  specifications: {
-    "Công suất": "500W RMS / 1000W Peak",
-    "Tần số đáp ứng": "40Hz - 20kHz",
-    "Độ nhạy": "95dB",
-    "Trở kháng": "8 Ohm",
-    "Kết nối": "Bluetooth 5.0, AUX, USB",
-    Pin: "Lithium 12V 100Ah",
-    "Thời gian sử dụng": "8-12 giờ",
-    "Chống nước": "IPX4",
-    "Kích thước": "45 x 35 x 70 cm",
-    "Trọng lượng": "25kg",
-    "Màu sắc": "Đen bóng, Đỏ cam",
-  },
-};
+// export const productDetailData = {
+//   id: 1,
+//   name: "Loa kéo gia đình công suất lớn Pro Max 2024",
+//   price: 13500000,
+//   discount: 50,
+//   rating: 4.8,
+//   images: [
+//     "/product.jpg",
+//     "/product.jpg",
+//     "/product.jpg",
+//     "/product.jpg",
+//     "/product.jpg",
+//     "/product.jpg",
+//   ],
+//   category: "Loa kéo",
+//   brand: "SoundMax",
+//   sku: "SKU-LK-001",
+//   description:
+//     "Loa kéo gia đình cao cấp với công suất mạnh mẽ, âm thanh chất lượng cao và thiết kế hiện đại. Sản phẩm phù hợp cho các sự kiện gia đình, tiệc tùng và sử dụng ngoài trời.",
+//   features: [
+//     "Công suất 500W RMS / 1000W Peak",
+//     "Tần số đáp ứng: 40Hz - 20kHz",
+//     "Kết nối Bluetooth 5.0",
+//     "Pin lithium 12V 100Ah",
+//     "Thời gian phát nhạc: 8-12 giờ",
+//     "Chống nước IPX4",
+//     "Micro không dây kèm theo",
+//     "Điều khiển từ xa",
+//   ],
+//   specifications: {
+//     "Công suất": "500W RMS / 1000W Peak",
+//     "Tần số đáp ứng": "40Hz - 20kHz",
+//     "Độ nhạy": "95dB",
+//     "Trở kháng": "8 Ohm",
+//     "Kết nối": "Bluetooth 5.0, AUX, USB",
+//     Pin: "Lithium 12V 100Ah",
+//     "Thời gian sử dụng": "8-12 giờ",
+//     "Chống nước": "IPX4",
+//     "Kích thước": "45 x 35 x 70 cm",
+//     "Trọng lượng": "25kg",
+//     "Màu sắc": "Đen bóng, Đỏ cam",
+//   },
+// };
 
 export const adminData = [
   {
